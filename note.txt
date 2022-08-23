@@ -1,0 +1,36 @@
+1.新建git本地仓库工作目录(如C:\Users\15970\Desktop\gitpjt)
+
+2.初始化本地仓库
+git init
+
+（在C:\Users\15970\Desktop\gitpjt下生产.git隐藏文件夹）
+3.配置本地git仓库身份识别
+git config --global user.name "XXX"
+git config --global user.email "XXXX@XX.com"
+(--global参数将身份设置为全局使用/配置文件在用户文件目录下的.gitconfig文件)
+git 基本设置在git安装目录C:\Program Files\Git\etc下的gitconfig文件中。
+
+4.在本地仓库码代码。。。。。
+
+5.git add .
+git commit -m "提交注释"
+
+6.远程仓库
+  6.1注册github网站账号
+
+  6.2创建ssh密钥：用于本地仓库与远程仓库免密通信
+     ssh-keygen -t rsa -C "XXXXX.XX.com"
+     （密钥信息存放在用户文件目录下的.ssh文件）
+
+7.关联远程仓库
+git remote add origin git@github.com:ltlber/ltlb_github.git
+(其中origin为远程仓库地址git@github.com:ltlber/ltlb_github.git的默认别名)
+
+8.本地仓库代码提交远程仓库
+第一次：git push origin master
+(表示提交至远程仓库origin的master分支)
+
+以后git push
+
+
+【注：以上命令均在项目文件目录C:\Users\15970\Desktop\gitpjt下右击git bash here打开终端进行输入】
