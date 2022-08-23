@@ -25,12 +25,22 @@ git commit -m "提交注释"
 7.关联远程仓库
 git remote add origin git@github.com:ltlber/ltlb_github.git
 (其中origin为远程仓库地址git@github.com:ltlber/ltlb_github.git的默认别名)
+（删除远程关联：git remote remove origin）
 
 8.本地仓库代码提交远程仓库
-第一次：git push origin master
+第一次：git push -u origin master
 (表示提交至远程仓库origin的master分支)
+（git pull表示从远程仓库拉取文件）
 
 以后git push
 
 
 【注：以上命令均在项目文件目录C:\Users\15970\Desktop\gitpjt下右击git bash here打开终端进行输入】
+echo "# github_prj" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M master
+git remote add origin https://github.com/ltlber/github_prj.git
+git push -u origin master
+gi status 查看本地仓库状态
